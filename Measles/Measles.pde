@@ -4,6 +4,7 @@ float xLeftEye, yLeftEye, xRightEye, yRightEye, eyeDiameter;
 float xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril;
 float xLeftMouth, yLeftMouth, xRightMouth, yRightMouth;
 float xMeasle, yMeasle, measleDiameter;
+color resetWhite=#FFFFFF, red=#FF0000;
 //
 void setup()
 {
@@ -54,7 +55,11 @@ void draw()
   //
   xMeasle = random(xCenter-faceRadius, xCenter+faceRadius);
   yMeasle = random(0, smallerDimension);
+  fill(red);
+  noStroke();
   ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter);
+  stroke(1); //reset default
+  fill(resetWhite);
   //
 }//End draw
 //
