@@ -3,8 +3,9 @@ float xFace, yFace, widthDiameterFace, heightDiameterFace, faceRadius, xCenter, 
 float xLeftEye, yLeftEye, xRightEye, yRightEye, eyeDiameter;
 float xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril;
 float xLeftMouth, yLeftMouth, xRightMouth, yRightMouth;
+int thack=50;
 float xMeasle, yMeasle, measleDiameter;
-color resetWhite=#FFFFFF, red=#FF0000;
+color resetWhite=#FFFFFF, red=#FF0000; //similar to int declaration
 //
 void setup()
 {
@@ -41,20 +42,24 @@ void setup()
   faceRadius = smallerDimension/2;
   measleDiameter = smallerDimension*1/50;
   //
+  background( color( random(255), random(255), random(255) ) );
   ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
   //
 }//End setup
 //
 void draw()
 {
-  ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
+
   ellipse(xLeftEye, yLeftEye, eyeDiameter, eyeDiameter);
   ellipse(xRightEye, yRightEye, eyeDiameter, eyeDiameter);
   triangle(xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril);
+  strokeCap(SQUARE); //ROUND (default), PROJECT
+  strokeWeight(thack);
   line(xLeftMouth, yLeftMouth, xRightMouth, yRightMouth);
+  strokeWeight(1); //resets default
   //
   xMeasle = random(xCenter-faceRadius, xCenter+faceRadius);
-  yMeasle = random(0, smallerDimension);
+  yMeasle = random(smallerDimension); //if zero is first, then default
   fill(red);
   noStroke();
   ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter);
