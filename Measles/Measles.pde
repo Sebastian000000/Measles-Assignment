@@ -40,16 +40,17 @@ void setup()
   xRightMouth = xRightEye;
   yRightMouth = yLeftMouth;
   faceRadius = smallerDimension/2;
-  measleDiameter = smallerDimension*1/40;
   //
-  background( color( random(255), random(255), random(255) ) );
+  Boolean nightMode=true;
+  color backgroundColour = ( nightMode==true ) ? color( random(255), random(255), 0 ) : color( random(255), random(255), random(255) ) ; //ternary operator, similar to IF-Else
+  background( backgroundColour );
   ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
   //
 }//End setup
 //
 void draw()
 {
-
+  
   ellipse(xLeftEye, yLeftEye, eyeDiameter, eyeDiameter);
   ellipse(xRightEye, yRightEye, eyeDiameter, eyeDiameter);
   triangle(xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril);
@@ -62,6 +63,7 @@ void draw()
   yMeasle = random(smallerDimension); //if zero is first, then default
   fill(red);
   noStroke();
+  measleDiameter = random(smallerDimension*1/75, smallerDimension*1/25); //smallerDimension*1/50;
   ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter);
   stroke(1); //reset default
   fill(resetWhite);
