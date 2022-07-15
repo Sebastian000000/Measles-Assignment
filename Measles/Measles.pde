@@ -23,21 +23,22 @@ void setup()
   }//End dimesion choice  
   widthDiameterFace = smallerDimension;
   heightDiameterFace = smallerDimension;
-  xLeftEye = xCenter - width*1/4;
-  yLeftEye = yCenter - height*1/4;
-  xRightEye = xCenter + width*1/4;
-  yRightEye = yCenter + height*1/8;
-  eyeDiameter = ;
-  xNoseBridge = xCenter - width*1/16;
-  yNoseBridge = yCenter - height*1/16;
-  xLeftNostril = ;
-  yLeftNostril = ;
-  xRightNostril = ;
-  yRightNostril = ;
-  xLeftMouth = ;
-  yLeftMouth = ;
-  xRightMouth = ;
-  yRightMouth = ;
+  xLeftEye = xCenter - width*3/16;
+  yLeftEye = yCenter - height*3/16;
+  xRightEye = xCenter + width*2/16;
+  yRightEye = yCenter + height*-1/16;
+  eyeDiameter = smallerDimension*1/8;
+  //xLeftMouth = ;
+  //yLeftMouth = ;
+  //xRightMouth = ;
+  //yRightMouth = ;
+  xNoseBridge = xCenter- width*1/32;
+  yNoseBridge = yCenter - height*1/32;
+  xLeftNostril = xCenter - width*3/32;
+  yLeftNostril = yCenter - height*3/32;
+  xRightNostril = xCenter + width*3/32;
+  yRightNostril = yCenter + height*3/32;
+  
 }//End setup
 //
 void draw() 
@@ -48,7 +49,7 @@ void draw()
   triangle(xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril);
   line(xLeftMouth, yLeftMouth, xRightMouth, yRightMouth);
   //
-  ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter)
+  ellipse(xMeasle, yMeasle, measleDiameter, measleDiameter);
   //
 }//End draw
 //
