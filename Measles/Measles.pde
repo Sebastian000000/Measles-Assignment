@@ -5,7 +5,7 @@ float xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRigh
 float xLeftMouth, yLeftMouth, xRightMouth, yRightMouth;
 int thack=50;
 float xMeasle, yMeasle, measleDiameter;
-color resetWhite=#FFFFFF, red=#FF0000; //similar to int declaration
+color resetWhite=#FFFFFF, red=#FF0000, jetBlack=#212121; //similar to int declaration
 color backgroundColour;
 Boolean nightMode=false;
 //
@@ -58,6 +58,7 @@ void draw()
 {
   ellipse(xLeftEye, yLeftEye, eyeDiameter, eyeDiameter);
   ellipse(xRightEye, yRightEye, eyeDiameter, eyeDiameter);
+  //arc(200, 200, 320, 320, 0, PI+QUARTER_PI, CHORD);
   ellipse(xLeftpupil, yLeftpupil,  pupilDiameter, pupilDiameter);
   ellipse(xRightpupil, yRightpupil, pupilDiameter, pupilDiameter);
   triangle(xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril);
