@@ -1,4 +1,17 @@
-//CANVAS will will be added to later
+//Global Variables
+float xFace, yFace, widthDiameterFace, heightDiameterFace, faceRadius, xCenter, smallerDimension;
+float xLeftEye, yLeftEye, xRightEye, yRightEye, eyeDiameter;
+float xNoseBridge, yNoseBridge, xLeftNostril, yLeftNostril, xRightNostril, yRightNostril;
+float xLeftMouth, yLeftMouth, xRightMouth, yRightMouth;
+int thack=50;
+float xMeasle, yMeasle, measleDiameter;
+color resetWhite=#FFFFFF, red=#FF0000; //similar to int declaration
+color backgroundColour;
+Boolean nightMode=false;
+//
+void setup()
+{
+  //CANVAS will will be added to later
   size(800, 600); //Landscape
   //
   //Population
@@ -61,9 +74,9 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  //Technically, there are 4 ways to code a mouse button press
+ //Technically, there are 4 ways to code a mouse button press
   //
-  if ( mouseButton == LEFT ) { //Night Mode FALSE
+   if ( mouseButton == LEFT ) { //Night Mode FALSE
     backgroundColour = color( random(255), random(255), random(255) ) ; 
     background( backgroundColour );
     ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
@@ -92,3 +105,4 @@ void mousePressed() {
   //
 }//End mousePressed
 //
+//End MAIN Program
