@@ -40,7 +40,7 @@ void setup()
   xRightMouth = xRightEye;
   yRightMouth = yLeftMouth;
   faceRadius = smallerDimension/2;
-  measleDiameter = smallerDimension*1/50;
+  measleDiameter = smallerDimension*1/40;
   //
   background( color( random(255), random(255), random(255) ) );
   ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
