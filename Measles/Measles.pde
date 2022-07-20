@@ -50,6 +50,7 @@ void setup()
   //
   backgroundColour = ( nightMode==true ) ? color( random(255), random(255), 0 ) : color( random(255), random(255), random(255) ) ; //ternary operator, similar to IF-Else
   background( backgroundColour );
+  //rect(xCenter-faceRadius, 0, 2*faceRadius, smallerDimension); //measle spawn positions
   ellipse(xFace, yFace, widthDiameterFace, heightDiameterFace);
   //
 }//End setup
