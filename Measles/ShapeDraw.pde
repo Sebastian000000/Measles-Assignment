@@ -38,7 +38,7 @@ void shapeDraw() {
   xMeasle = random(xCenter-measleRange, xCenter+measleRange);
   yMeasle = random(yCenter-measleRange, yCenter+measleRange); //if zero is first, then default
  
-
+  
   fill(red);
   noStroke();
   measleDiameter = random(smallerDimension*1/75, smallerDimension*1/25); //smallerDimension*1/50;
