@@ -11,6 +11,7 @@ float xMeasle, yMeasle, measleDiameter;
 color resetWhite=#FFFFFF, red=#FF0000, jetBlack=#212121, buttonFill;
 color backgroundColour;
 Boolean nightMode=false;
+//float radius;
 //
 String title = "Quit";
 float titleX, titleY, titleWidth, titleHeight;

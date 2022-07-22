@@ -36,6 +36,7 @@ void populatingVariables() {
   titleY = height*1/10;
   titleWidth = width*3/20;
   titleHeight = height*1/10;
+  //radius = random(0,widthDiameterFace/2);
   //
   String[] fontList = PFont.list();
 printArray(fontList);

@@ -37,6 +37,10 @@ void shapeDraw() {
   //
   xMeasle = random(xCenter-measleRange, xCenter+measleRange);
   yMeasle = random(yCenter-measleRange, yCenter+measleRange); //if zero is first, then default
+  //xMeasle = random(radius, radius);
+  //yMeasle = random(radius, radius); //if zero is first, then default
+  
+  
  
   
   fill(red);
